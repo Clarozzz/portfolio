@@ -1,0 +1,16 @@
+{
+    "language": {
+        "name": "EN",
+        "about": "About me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "icon": "https://flagcdn.com/gb.svg",
+        "about-text-1": "There has always been something about computers that I have loved; how programs work on them and why they do so have kept my curiosity alive. That was the reason why I decided to study systems engineering.",
+        "about-text-2": "I consider myself an enthusiast, always willing to learn from different areas of computer science. I have the ability to create and work in a team, constantly striving to improve myself every day, and I am open to new professional trends.",
+        "about-text-3": "When I'm not studying or programming, I spend my free time reading books, playing guitar, learning any new skill that comes my way, or playing video games.",
+        "card-title-1": "Portfolio",
+        "card-content-1": "Personal portfolio created using multiple tools offered by React and Next.js.",
+        "card-title-2": "SaimCis",
+        "card-content-2": "Medical care system, developed collaboratively as a team project for \"software engineering\" class."
+    }
+}

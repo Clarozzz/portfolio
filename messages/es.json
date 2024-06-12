@@ -1,0 +1,16 @@
+{
+    "language": {
+        "name": "ES",
+        "about": "Sobre mi",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "icon": "https://flagcdn.com/es.svg",
+        "about-text-1": "Siempre ha habido algo en cuanto a las computadoras que me ha encantado, el como funcionan los programas en ella y el por que lo hacen han mantenido despierta mi curiosidad. Esa fue la razón por la cual decidí estudiar ingeniería en sistemas.",
+        "about-text-2": "Me considero entusiasta y siempre dispuesto a aprender de las diferentes áreas de la informática, con capacidad de crear y trabajar en equipo, buscando superarme cada dia, con apertura a las nuevas tendencias profesionales.",
+        "about-text-3": "Cuando no estoy estudiando o programando, paso mi tiempo libre leyendo libros, tocando guitarra, aprendiendo cualquier habilidad nueva que se me presente o jugando videojuegos",
+        "card-title-1": "Portafolio",
+        "card-content-1": "Portafolio personal creado utilizando multiples herramientas que ofrecen React y Next.js",
+        "card-title-2": "SaimCis",
+        "card-content-2": "Sistema de atención integral medico, desarrollada en equipo como proyecto para la clase \"ingeniería de software\""
+    }
+}
