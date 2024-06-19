@@ -19,9 +19,9 @@ export default function Home() {
     <>
       <Navbar />
 
-      <div className="mx-auto min-h-screen max-w-screen-xl px-24 py-0">
+      <div className="mx-auto min-h-screen max-w-screen-xl px-10 lg:px-24 py-0">
 
-        <div className="flex gap-4 justify-between">
+        <div className="lg:flex gap-4 justify-between">
 
           <Links sharedState={sharedState} />
 

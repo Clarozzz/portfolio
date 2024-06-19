@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaReact } from 'react-icons/fa';
-import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
+import { RiNextjsFill, RiSupabaseFill, RiTailwindCssFill } from 'react-icons/ri';
 import { SiJavascript, SiTypescript } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import ProjectsGrid from './projects-grid';
@@ -29,7 +29,7 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
     }, [aboutInView, skillsInView, projectsInView, onStateChange]);
 
     return (
-        <div className="py-24 w-2/3 text-center">
+        <div className="py-24 lg:w-2/3 lg:text-center">
             <div ref={aboutRef} id="about" className="mb-36 scroll-mt-24">
                 <h1 className="text-transparent animated-gradient bg-clip-text text-5xl font-bold">
                     {t('about')}
@@ -53,7 +53,7 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
                     {t('skills')}
                 </h1>
 
-                <div className='grid grid-cols-4 gap-8 justify-items-center mt-10 text-gray-800 dark:text-gray-300'>
+                <div className='grid grid-cols-3 md:grid-cols-4 gap-8 justify-items-center mt-10 text-gray-800 dark:text-gray-300'>
                     <div>
                         <FaHtml5 size={size} />
                         <div className='mt-2'>HTML</div>
@@ -90,10 +90,14 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
                         <FaGithub size={size} />
                         <div className='mt-2'>GitHub</div>
                     </div>
+                    <div>
+                        <RiSupabaseFill size={size} />
+                        <div className='mt-2'>Supabase</div>
+                    </div>
                 </div>
             </div>
 
-            <div ref={projectsRef} id="projects" className="mb-24 scroll-mt-24">
+            <div ref={projectsRef} id="projects" className="lg:mb-24 mb-10 scroll-mt-24">
                 <h1 className="text-transparent animated-gradient bg-clip-text h-14 text-5xl font-bold">
                     {t('projects')}
                 </h1>

@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useTranslations } from 'next-intl';
 import { IoMdMail } from "react-icons/io";
 
-export default function Links({ sharedState }: {sharedState: string}) {
+export default function Links({ sharedState }: { sharedState: string }) {
     const [activeLink, setActiveLink] = useState('a-about');
 
     const handleClick = useCallback((id: string) => {
@@ -29,15 +29,21 @@ export default function Links({ sharedState }: {sharedState: string}) {
     }, [sharedState, handleClick]);
 
     return (
-        <div className="sticky top-0 max-h-screen w-1/2 py-24 flex flex-col justify-between" >
+        <div className="lg:sticky top-0 max-h-screen lg:w-1/2 lg:py-24 pt-24 flex flex-col justify-between" >
 
             <div>
                 <h1 className='text-transparent animated-gradient bg-clip-text text-6xl font-bold'>
                     Clarozzz
                 </h1>
+                <h2 className="mt-2 text-xl lg:hidden">
+                    {t('career')}
+                </h2>
+                <h3 className="text-slate-600 dark:text-slate-400 mt-4 lg:hidden">
+                    {t('quote')}
+                </h3>
             </div>
 
-            <div className="flex flex-col text-xl font-medium gap-2">
+            <div className="lg:flex flex-col text-xl font-medium gap-2 hidden">
                 <div>
                     <Link
                         id="a-about"
@@ -73,13 +79,16 @@ export default function Links({ sharedState }: {sharedState: string}) {
                 </div>
             </div>
 
-            <div className="flex gap-3">
-                <Link className="flex items-center gap-2 border-gradient px-3" href="mailto:jcsdlg49@gmail.com" target="_blank">
-                    <IoMdMail className="text-slate-600 dark:text-slate-400 transition-colors" size={30} />
-                    jcsdlg49@gmail.com
-                </Link>
-                <Link className="text-slate-600 dark:text-slate-400 hover:text-c2 dark:hover:text-c2 transition-colors" href='https://github.com/Clarozzz' target="_blank" aria-label="github"><FaGithub size={30} /></Link>
-                <Link className="text-slate-600 dark:text-slate-400 hover:text-c2 dark:hover:text-c2 transition-colors" href='https://linkedin.com/in/cesar-claros-622236312' target="_blank" aria-label="linkedin"><FaLinkedin size={30} /></Link>
+            <div>
+                <div className="flex gap-3 mt-6 lg:mt-10">
+                    <Link className="flex items-center gap-2 border-gradient px-3" href="mailto:jcsdlg49@gmail.com" target="_blank">
+                        <IoMdMail className="text-slate-600 dark:text-slate-400 transition-colors" size={30} />
+                        jcsdlg49@gmail.com
+                    </Link>
+                    <Link className="text-slate-600 dark:text-slate-400 hover:text-c2 dark:hover:text-c2 transition-colors" href='https://github.com/Clarozzz' target="_blank" aria-label="github"><FaGithub size={30} /></Link>
+                    <Link className="text-slate-600 dark:text-slate-400 hover:text-c2 dark:hover:text-c2 transition-colors" href='https://linkedin.com/in/cesar-claros-622236312' target="_blank" aria-label="linkedin"><FaLinkedin size={30} /></Link>
+                </div>
+
             </div>
 
         </div>
