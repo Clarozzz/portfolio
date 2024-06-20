@@ -7,7 +7,7 @@ import Image from "next/image";
 import { LuMoon, LuSun } from "react-icons/lu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useTranslations } from 'next-intl';
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { IoMenu } from "react-icons/io5";
 import Link from "next/link";
 
@@ -38,10 +38,28 @@ export default function Navbar() {
                 <Sheet>
                     <SheetTrigger aria-label="menu"><IoMenu size={30} /></SheetTrigger>
                     <SheetContent side={"left"}>
-                        <div className="flex flex-col gap-4 m-10">
-                            <Link href="#about">{t('about')}</Link>
-                            <Link href="#skills">{t('skills')}</Link>
-                            <Link href="#projects">{t('projects')}</Link>
+                        <div className="flex flex-col gap-4 ml-8 mt-14">
+                            <Link
+                                href="#about"
+                                className='text-2xl text-slate-600 dark:text-slate-400 hover:text-black hover:border-l-black dark:hover:text-white dark:hover:border-l-white hover:pl-6 hover:border-l-2 transition-all'
+                            >
+                                {t('about')}
+                            </Link>
+
+                            <Link
+                                href="#skills"
+                                className='text-2xl text-slate-600 dark:text-slate-400 hover:text-black hover:border-l-black dark:hover:text-white dark:hover:border-l-white hover:pl-6 hover:border-l-2 transition-all'
+                            >
+                                {t('skills')}
+                            </Link>
+
+                            <Link
+                                href="#projects"
+                                className='text-2xl text-slate-600 dark:text-slate-400 hover:text-black hover:border-l-black dark:hover:text-white dark:hover:border-l-white hover:pl-6 hover:border-l-2 transition-all'
+                            >
+                                {t('projects')}
+                            </Link>
+
                         </div>
                     </SheetContent>
                 </Sheet>
