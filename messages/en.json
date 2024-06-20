@@ -1,6 +1,7 @@
 {
     "language": {
         "name": "EN",
+        "alt": "English",
         "about": "About me",
         "skills": "Skills",
         "projects": "Projects",

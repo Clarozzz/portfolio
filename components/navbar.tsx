@@ -68,7 +68,7 @@ export default function Navbar() {
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="default" aria-label="languages selector">
-                            <Image className="mr-2" src={t('icon')} width={30} height={25} alt={t('name')} />
+                            <Image className="mr-2" src={t('icon')} width={30} height={25} alt={t('alt')} />
                             {t('name')}
                         </Button>
                     </DropdownMenuTrigger>
