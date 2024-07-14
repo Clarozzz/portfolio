@@ -27,7 +27,7 @@ export default function ProjectsGrid() {
                     <CardContent>
                         {t('card-content-1')}
                     </CardContent>
-                    <CardFooter className="flex flex-col gap-6">
+                    <CardFooter className="flex flex-col gap-6 items-start">
                         <div className="flex flex-row gap-2 flex-wrap">
                             <Badge variant="cc">React</Badge>
                             <Badge variant="cc">Typescript</Badge>
@@ -73,7 +73,7 @@ export default function ProjectsGrid() {
                     <CardContent>
                         {t('card-content-2')}
                     </CardContent>
-                    <CardFooter className="flex flex-col gap-6">
+                    <CardFooter className="flex flex-col gap-6 items-start">
                         <div className="flex flex-row gap-2 flex-wrap">
                             <Badge variant="cc2">React</Badge>
                             <Badge variant="cc2">Typescript</Badge>
@@ -86,6 +86,54 @@ export default function ProjectsGrid() {
                                 <Button variant="default" aria-label="github repository"><FaGithub size={20} /></Button>
                             </Link>
                             <Link href="https://saimcis.vercel.app/" target="_blank">
+                                <Button variant="default" aria-label="external link"><FaExternalLinkAlt /></Button>
+                            </Link>
+                        </div>
+                    </CardFooter>
+                </Card>
+            </div>
+            <div className="col-span-1">
+                <Card className="overflow-hidden">
+                    <Carousel
+                        opts={{
+                            loop: true
+                        }}
+                        plugins={[
+                            Autoplay({
+                                delay: 2000,
+                            }),
+                        ]}
+                        className="w-full"
+                    >
+                        <CarouselContent>
+                            <CarouselItem>
+                                <Image className="w-full" width={300} height={300} src="/blog1.png" alt="" />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <Image className="w-full" width={300} height={300} src="/blog2.png" alt="" />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <Image className="w-full" width={300} height={300} src="/blog3.png" alt="" />
+                            </CarouselItem>
+                        </CarouselContent>
+                    </Carousel>
+                    <CardHeader>
+                        <CardTitle>{t('card-title-3')}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        {t('card-content-3')}
+                    </CardContent>
+                    <CardFooter className="flex flex-col gap-6 items-start">
+                        <div className="flex flex-row gap-2 flex-wrap">
+                            <Badge variant="cc2">Astro</Badge>
+                            <Badge variant="cc2">Typescript</Badge>
+                            <Badge variant="cc2">Tailwind</Badge>
+                        </div>
+                        <div className="flex gap-6">
+                            <Link href="https://github.com/Clarozzz/blog" target="_blank">
+                                <Button variant="default" aria-label="github repository"><FaGithub size={20} /></Button>
+                            </Link>
+                            <Link href="https://blog-clarozzz.vercel.app/" target="_blank">
                                 <Button variant="default" aria-label="external link"><FaExternalLinkAlt /></Button>
                             </Link>
                         </div>

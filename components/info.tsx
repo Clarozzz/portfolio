@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaReact } from 'react-icons/fa';
 import { RiNextjsFill, RiSupabaseFill, RiTailwindCssFill } from 'react-icons/ri';
-import { SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiAstro, SiJavascript, SiTypescript } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import ProjectsGrid from './projects-grid';
 
@@ -12,7 +12,7 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
 
     const [aboutRef, aboutInView] = useInView({ threshold: 1 });
     const [skillsRef, skillsInView] = useInView({ threshold: 1 });
-    const [projectsRef, projectsInView] = useInView({ threshold: 1 });
+    const [projectsRef, projectsInView] = useInView({ threshold: 0.5 });
 
     const size = 90;
 
@@ -93,6 +93,10 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
                     <div>
                         <RiSupabaseFill size={size} />
                         <div className='mt-2'>Supabase</div>
+                    </div>
+                    <div>
+                        <SiAstro size={size} />
+                        <div className='mt-2'>Astro</div>
                     </div>
                 </div>
             </div>

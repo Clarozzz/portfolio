@@ -13,6 +13,8 @@
         "card-content-1": "Personal portfolio created using multiple tools offered by React and Next.js.",
         "card-title-2": "SaimCis",
         "card-content-2": "Medical care system, developed collaboratively as a team project for \"software engineering\" class.",
+        "card-title-3": "Blog",
+        "card-content-3": "Template for a static blog created in Astro",
         "career": "Systems Engineer",
         "quote": "I like to ponder about the world and its mysteries."
     }
