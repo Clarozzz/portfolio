@@ -15,7 +15,12 @@
         "card-content-2": "Sistema de atención integral medico, desarrollada en equipo como proyecto para la clase \"ingeniería de software\"",
         "card-title-3": "Blog",
         "card-content-3": "Plantilla para un blog estático creada en Astro",
+        "card-title-4": "Junker",
+        "card-content-4": "Marketplace de autopartes desarrollado en equipo como proyecto de clase",
         "career": "Ingeniero en Sistemas",
-        "quote": "Me gusta reflexionar sobre el mundo y sus misterios."
+        "quote": "Me gusta reflexionar sobre el mundo y sus misterios.",
+        "code": "Código",
+        "coming": "Próximamente",
+        "coming-text": "Proyecto actualmente en desarrollo!"
     }
 }

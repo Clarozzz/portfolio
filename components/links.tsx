@@ -33,7 +33,7 @@ export default function Links({ sharedState }: { sharedState: string }) {
 
             <div>
                 <h1 className='text-transparent animated-gradient bg-clip-text text-6xl font-bold'>
-                    Clarozzz
+                    Cesar Claros
                 </h1>
                 <h2 className="mt-2 text-xl lg:hidden">
                     {t('career')}

@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaReact } from 'react-icons/fa';
 import { RiNextjsFill, RiSupabaseFill, RiTailwindCssFill } from 'react-icons/ri';
-import { SiAstro, SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiAstro, SiFastapi, SiJavascript, SiTypescript } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import ProjectsGrid from './projects-grid';
 
@@ -12,7 +12,7 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
 
     const [aboutRef, aboutInView] = useInView({ threshold: 1 });
     const [skillsRef, skillsInView] = useInView({ threshold: 1 });
-    const [projectsRef, projectsInView] = useInView({ threshold: 0.5 });
+    const [projectsRef, projectsInView] = useInView({ threshold: 0.25 });
 
     const size = 90;
 
@@ -53,7 +53,7 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
                     {t('skills')}
                 </h1>
 
-                <div className='grid grid-cols-3 md:grid-cols-4 gap-8 justify-items-center mt-10 text-gray-800 dark:text-gray-300'>
+                <div className='grid grid-cols-3 md:grid-cols-4 gap-8 justify-items-center mt-10 text-gray-800 dark:text-gray-300 text-center'>
                     <div>
                         <FaHtml5 size={size} />
                         <div className='mt-2'>HTML</div>
@@ -97,6 +97,10 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
                     <div>
                         <SiAstro size={size} />
                         <div className='mt-2'>Astro</div>
+                    </div>
+                    <div>
+                        <SiFastapi size={size} />
+                        <div className='mt-2'>FastAPI</div>
                     </div>
                 </div>
             </div>

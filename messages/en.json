@@ -15,7 +15,12 @@
         "card-content-2": "Medical care system, developed collaboratively as a team project for \"software engineering\" class.",
         "card-title-3": "Blog",
         "card-content-3": "Template for a static blog created in Astro",
+        "card-title-4": "Junker",
+        "card-content-4": "Auto parts marketplace developed as a team as a class project",
         "career": "Systems Engineer",
-        "quote": "I like to ponder about the world and its mysteries."
+        "quote": "I like to ponder about the world and its mysteries.",
+        "code": "Code",
+        "coming": "Coming Soon",
+        "coming-text": "Cool proyect on the works!"
     }
 }
