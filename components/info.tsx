@@ -105,7 +105,7 @@ export default function Info({ onStateChange }: { onStateChange: (id: string) =>
                 </div>
             </div>
 
-            <div ref={projectsRef} id="projects" className="lg:mb-24 mb-10 scroll-mt-24">
+            <div ref={projectsRef} id="projects" className=" scroll-mt-24">
                 <h1 className="text-transparent animated-gradient bg-clip-text h-14 text-5xl font-bold">
                     {t('projects')}
                 </h1>

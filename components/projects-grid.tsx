@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { useTranslations } from "next-intl";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import React from "react";
@@ -11,7 +11,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Button } from "./ui/button";
 import Autoplay from 'embla-carousel-autoplay'
 import { Badge } from "./ui/badge";
-import { LoaderCircle } from "lucide-react";
+import { CodeXml, LaptopMinimal, LoaderCircle, Server } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu";
+import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 
 
 export default function ProjectsGrid() {
@@ -158,7 +160,7 @@ export default function ProjectsGrid() {
                 <Card className="overflow-hidden">
                     <Carousel
                         opts={{
-                            loop: true, 
+                            loop: true,
                         }}
                         plugins={[
                             Autoplay({
@@ -202,10 +204,26 @@ export default function ProjectsGrid() {
                         </div>
                         <div className="w-full">
                             <div className="flex justify-between">
-                                <Link href="https://github.com/Clarozzz/portfolio" target="_blank">
-                                    <Button variant="secondary" aria-label="github repository"><FaGithub className="mr-1" size={20} /> {t('code')}</Button>
-                                </Link>
-                                <Link href="#">
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <Button variant="secondary" aria-label="github repository"><FaGithub className="mr-1" size={20} /> {t('code')}</Button>
+                                    </DropdownMenuTrigger>
+
+                                    <DropdownMenuContent>
+                                        <DropdownMenuItem>
+                                            <Link className="flex" href="https://github.com/Clarozzz/junker-frontend" target="_blank">
+                                                <LaptopMinimal className="mr-2" /> Frontend
+                                            </Link>
+                                        </DropdownMenuItem>
+                                        <DropdownMenuItem>
+                                            <Link className="flex" href="https://github.com/Franklin-Amador/Junker-Backend" target="_blank">
+                                                <Server className="mr-2" /> Backend
+                                            </Link>
+                                        </DropdownMenuItem>
+                                    </DropdownMenuContent>
+
+                                </DropdownMenu>
+                                <Link href="https://junker.vercel.app/" target="_blank">
                                     <Button aria-label="internal link"><FiExternalLink className="mr-1" size={19} /> Demo</Button>
                                 </Link>
                             </div>
@@ -213,24 +231,27 @@ export default function ProjectsGrid() {
                     </CardFooter>
                 </Card>
             </div>
-            <Card className="overflow-hidden flex flex-col h-full border-dashed">
-                <div className="flex items-center justify-center h-[220px] bg-muted/50">
-                    <LoaderCircle size={50} className="animate-spin" />
-                </div>
-                <div className="flex flex-col flex-grow justify-between">
-                    <div>
-                        <CardHeader>
-                            <CardTitle>{t('coming')}</CardTitle>
-                        </CardHeader>
-                        <CardContent>{t('coming-text')}</CardContent>
+            <div className="col-span-1 lg:col-span-2">
+                <Card className="overflow-hidden">
+                    <div className="flex items-center justify-center aspect-[16/9] bg-black text-white">
+                        <CodeXml size={100} />
                     </div>
-                    <CardFooter className="flex flex-col gap-6 items-start mt-auto">
-                        <div className="flex flex-row gap-2 flex-wrap">
-                            <Badge variant="outline">{t('coming')}</Badge>
+
+                    <div className="flex flex-col flex-grow justify-between">
+                        <div>
+                            <CardHeader>
+                                <CardTitle>{t('coming')}</CardTitle>
+                            </CardHeader>
+                            <CardContent>{t('coming-text')}</CardContent>
                         </div>
-                    </CardFooter>
-                </div>
-            </Card>
+                        <CardFooter className="flex flex-col gap-6 items-start mt-auto">
+                            <div className="flex flex-row gap-2 flex-wrap">
+                                <Badge variant="outline">{t('coming')}</Badge>
+                            </div>
+                        </CardFooter>
+                    </div>
+                </Card>
+            </div>
         </div>
     )
 }
